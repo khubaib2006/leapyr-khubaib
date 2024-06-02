@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leap year-ES6</title>
+</head>
+<body>
+   <script>
+    const isLeapYear = (year) => {
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+            return true;
+        }
+        return false;
+    };
+    
+   
+    let userYear = prompt("Enter a year:");
+    
+    
+    userYear = Number(userYear);
+    
+   
+    if (!isNaN(userYear)) {
+        
+        if (isLeapYear(userYear)) {
+            document.write(`${userYear} is a leap year.`);
+        } else {
+            document.write(`${userYear} is not a leap year.`);
+        }
+    } else {
+        document.write("Please enter a valid year.");
+    }
+    </script> 
+</body>
+</html>
